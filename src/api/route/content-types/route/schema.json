@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "routes",
+  "info": {
+    "singularName": "route",
+    "pluralName": "routes",
+    "displayName": "Route",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start_destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city",
+      "inversedBy": "route"
+    },
+    "end_destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city",
+      "inversedBy": "route"
+    },
+    "via": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::routeroad.routeroad"
+    },
+    "road_status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive"
+      ]
+    },
+    "fare": {
+      "type": "biginteger"
+    },
+    "distance": {
+      "type": "decimal"
+    },
+    "estimated_duration": {
+      "type": "time"
+    }
+  }
+}

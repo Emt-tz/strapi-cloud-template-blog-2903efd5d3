@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drivers",
+  "info": {
+    "singularName": "driver",
+    "pluralName": "drivers",
+    "displayName": "Driver",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "emergency_contact": {
+      "type": "biginteger"
+    },
+    "license_number": {
+      "type": "text"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

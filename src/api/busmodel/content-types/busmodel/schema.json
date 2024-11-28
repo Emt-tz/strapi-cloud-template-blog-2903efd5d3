@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "busmodels",
+  "info": {
+    "singularName": "busmodel",
+    "pluralName": "busmodels",
+    "displayName": "Busmodel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "manufacturer": {
+      "type": "text"
+    },
+    "total_seats": {
+      "type": "integer"
+    },
+    "no_of_rows": {
+      "type": "integer"
+    },
+    "seats_per_row": {
+      "type": "integer"
+    },
+    "model_name": {
+      "type": "string"
+    },
+    "seatconfiguration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seatconfiguration.seatconfiguration",
+      "mappedBy": "bus_model_id"
+    }
+  }
+}

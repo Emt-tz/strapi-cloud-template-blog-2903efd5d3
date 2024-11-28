@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_amount": {
+      "type": "biginteger"
+    },
+    "options": {
+      "type": "enumeration",
+      "enum": [
+        "zama"
+      ]
+    },
+    "varchar": {
+      "type": "text"
+    },
+    "payment_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "completed",
+        "canceled"
+      ]
+    }
+  }
+}

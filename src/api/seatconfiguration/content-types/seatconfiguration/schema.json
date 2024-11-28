@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seatconfigurations",
+  "info": {
+    "singularName": "seatconfiguration",
+    "pluralName": "seatconfigurations",
+    "displayName": "Seatconfiguration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bus_model_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::busmodel.busmodel",
+      "inversedBy": "seatconfiguration"
+    },
+    "row_number": {
+      "type": "integer"
+    },
+    "column_number": {
+      "type": "integer"
+    },
+    "seat_type": {
+      "type": "enumeration",
+      "enum": [
+        "seat",
+        "toilet",
+        "fridge"
+      ]
+    }
+  }
+}

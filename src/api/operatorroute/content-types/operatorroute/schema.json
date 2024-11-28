@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "operatorroutes",
+  "info": {
+    "singularName": "operatorroute",
+    "pluralName": "operatorroutes",
+    "displayName": "Operatorroute"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "operator_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::operator.operator"
+    },
+    "route_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    },
+    "boarding_station": {
+      "type": "json"
+    },
+    "dropping_station": {
+      "type": "json"
+    },
+    "fare": {
+      "type": "biginteger"
+    },
+    "roundtrip_fare": {
+      "type": "biginteger"
+    },
+    "departure_time": {
+      "type": "time"
+    },
+    "arrival_time": {
+      "type": "time"
+    }
+  }
+}

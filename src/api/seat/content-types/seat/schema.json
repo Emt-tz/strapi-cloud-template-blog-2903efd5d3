@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seats",
+  "info": {
+    "singularName": "seat",
+    "pluralName": "seats",
+    "displayName": "Seat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seat_no": {
+      "type": "string"
+    },
+    "seat_config_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seatconfiguration.seatconfiguration"
+    }
+  }
+}

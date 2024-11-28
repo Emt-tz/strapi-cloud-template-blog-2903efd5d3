@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buses",
+  "info": {
+    "singularName": "bus",
+    "pluralName": "buses",
+    "displayName": "Bus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "driver_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::driver.driver"
+    },
+    "operator_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::operator.operator"
+    },
+    "name": {
+      "type": "text"
+    },
+    "plate_no": {
+      "type": "text"
+    },
+    "amenities": {
+      "type": "enumeration",
+      "enum": [
+        "WIFI",
+        "AC",
+        "TV",
+        "Camera",
+        "USB Charging"
+      ]
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "bus_status": {
+      "type": "enumeration",
+      "enum": [
+        "inoperation",
+        "underschedule",
+        "outofservice"
+      ]
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "economy",
+        "business",
+        "first"
+      ]
+    },
+    "card_number": {
+      "type": "text"
+    },
+    "busmodel_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::busmodel.busmodel"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "busschedules",
+  "info": {
+    "singularName": "busschedule",
+    "pluralName": "busschedules",
+    "displayName": "Busschedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bus_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::bus.bus"
+    },
+    "operator_route_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::operatorroute.operatorroute"
+    },
+    "departure_date": {
+      "type": "date"
+    },
+    "departure_time": {
+      "type": "time"
+    },
+    "arrival_time": {
+      "type": "time"
+    },
+    "arrival_date": {
+      "type": "date"
+    }
+  }
+}

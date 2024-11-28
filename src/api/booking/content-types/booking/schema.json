@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_fare": {
+      "type": "biginteger"
+    },
+    "payment_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment.payment"
+    },
+    "bus_schedule_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::busschedule.busschedule"
+    },
+    "customer_details": {
+      "type": "json"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "agent_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agent.agent"
+    },
+    "booking_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "canceled"
+      ]
+    }
+  }
+}

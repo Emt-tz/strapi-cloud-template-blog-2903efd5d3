@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "singularName": "city",
+    "pluralName": "cities",
+    "displayName": "City"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "station": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::station.station",
+      "mappedBy": "city_id"
+    },
+    "route": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route",
+      "mappedBy": "end_destination"
+    }
+  }
+}

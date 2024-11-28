@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agents",
+  "info": {
+    "singularName": "agent",
+    "pluralName": "agents",
+    "displayName": "Agent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "operator_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::operator.operator"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "contact_number": {
+      "type": "biginteger"
+    },
+    "is_active": {
+      "type": "boolean"
+    }
+  }
+}
